@@ -1,167 +1,296 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-:root {   /*para criar variaveis no css*/
-    --branco-principal: #ffff;
-    --cinza-secundario: #c0c0c0;
-    --botao-azul: #167bf7;
-    --cor-fundo: #00030c;
-    --fonte-principal: 'Inter';
-    --botao-azul-efeito: #73b0fa;
- }
 
- body {
-     background-color:  var(--cor-fundo);
-     color: var(--branco-principal);
-     font-family: var(--fonte-principal);
-     font-size: 16px;
-     font-weight: 400;
- }
-/*para selecionar um estilo para todos os elementos*/
- * {
-     margin: 0;
-     padding: 0;
- }
-
- .principal {
-     background-image: url("Background.png");
-     background-repeat: no-repeat;
-     background-size: contain;
-     align-items: center;
-     text-align: center;
- }
-
- .container {
-     height: 100vh;
-     display: grid;
-     grid-template-columns: 50% 50%;
- }
-
- .container-botao {
-     background-color: var(--botao-azul);
-     border-radius: 5px;
-     padding: 1em;
-     color: var(--branco-principal);
-     display: block;
-     text-decoration: none;
-     margin-bottom: 1em;
- }
-
- .container-botao2 {
-     background-color: transparent;
-     border: 2px solid var(--branco-principal);
- }
-
- .container-aviso {
-     font-size: 15px;
-     color: var(--cinza-secundario);
- }
-
- .container-titulo {
-     font-size: 28px;
-     font-weight: 700;
- }
-
- .container-imagem {
-     margin: 1em 0 2em 0; /*essas quatro tamanhos, são como um relogio, o 1em é meia noite(o topo), o 0 o lado, e o 2em é meio dia(embaixo)*/
- }
-/*aqui esta configurado 0 para o topo e embaixo, e 6m para os lados*/
- .container-caixa {
-     margin: 0 6em;
- }
-
- .secundario-imagem {
-     width: 80%;
- }
-
- .secundario {
-     align-items: center;
-     margin: 0 10em;
- }
-
- .descricao-titulo {
-     font-weight: 700;
-     font-size: 48px;
-     color: var(--branco-principal);
-     margin-bottom: 0.1em;
- }
-
- .descricao-texto {
-     color: var(--cinza-secundario);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background: rgb(172, 171, 171);
+    padding: 20px 0;
 }
 
-.container-botao3 {
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+} 
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(77, 77, 77);
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
     display: inline-block;
-    margin-top: 1em;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000;
+    border-style: solid;
+    border-width: 3px;
+    border: 3px solid #000; /*da no mesmo usar esse e o de cima para estilizar as bordas*/
+    border-radius: 10px;
 }
 
-.container-descricao {
-    padding: 2em;
+.produtos li:hover {
+    border-color: rgb(136, 134, 100);
+    
 }
 
-.dispositivos-lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none; /*para tirar a bolinha asterico da lista de items na secao dispositivos*/
+.produtos li:active {
+    border-color: rgb(179, 199, 67);
 }
 
-.dispositivos {
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+form {
+    margin: 40px 0; 
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 20px;
+    width: 50%;
+    font-weight: bold;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: rgb(221, 144, 2);
+    transform: scale(1.1);
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+/*css da pagina inicial*/
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    text-shadow: 2px 2px rgb(248, 246, 246);
+}
+
+.titulo-principal:first-letter {
+    font-weight: bold;
+}
+/*aqui esta o uso dos pseudo-elementos*/
+/*.titulo-principal:before{
+    content: "[ ";
+}*/
+
+.titulo-principal:after{
+    content: " ";
+}
+
+.principal {
+    padding: 3em 0;
+    background: rgb(245, 243, 243);
+    width: 940px;
+    margin: 0 auto;
+    color: rgba(0,0,0, 0.6)
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.mapa {
+    padding: 3em 0;
+    margin: 0 auto;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: gray;
+    box-shadow: inset 0 0 30px rgb(83, 83, 83);/*sombra interna no elemento*/
+}
+
+.conteudo-beneficio {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.listas-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+/*para o espacamento entres as linhas do texto sobre beneficios, mas tambem pode utilizar o nth-child(4) onde vc coloca o numero do item que vc quer*/
+.itens {
+    line-height: 1.5;
+}
+/*se caso precise selecionar um item de uma div especifico sem afetar os outros como ele, utilize essa tag */
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before{
+    content: "★";
+}
+
+.imagem {
+    width: 60%;
+    opacity: 1;
+    box-shadow: 10px 10px 30px 5px, -10px -10px rgb(70, 70, 70);
+}
+
+.imagem:hover{
+    opacity: 0.8;
+}
+
+.utencilio {
+    width: 120px;
+    float: left;
+    margin: 0 20px 17px 0;
+}
+
+.mapa p {
+    margin: 0 0 2em;
     text-align: center;
 }
 
-.dispositivos-titulo {
-    font-size: 48px;
-    color: var(--branco-principal);
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+/*para selecionar um elemento filho-direto do main*/
+/*main > p {
+    background: red;
+}
+/*para selecionar um elemento que vem logo depois da imagem*/
+/*img + p {
+    background-color: blue;
+}
+/*para selecionar todos os elementos depois do img*/
+/*img ~ p{
+    background-color: yellow;
 }
 
-.lista-item{
-    font-size: 30px;
-    color: var(--branco-principal);
-}
-
-.dispositivos-lista {
-    margin: 5em 0;
-}
-
-.rodape-logo {
-    text-align: center;
-}
-
-.rodape-lista {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    margin-top: 1em;
-}
-
-.lista-link a {
-    color: var(--branco-principal);
-    margin-left: 1em;
-    text-decoration: none;/*para tirar o estilo sublinhado nos links*/
-}
-
-.rodape-texto {
-    margin: 1em 0;
-    color: var(--branco-principal);
-    font-size: 14px;
-}
-
-.rodape {
-    text-align: center;
-    margin: 5em 3em;
-}
-
-.rodape-logo {
-    margin-bottom: 2em;
-}
-
-.lista-link a:hover {
-    color: var(--botao-azul);/*quando passar o mouse por cima o link ficara azul*/
-}
-
-.lista-link a:active {
-    color: purple;
-}
-
-.container-botao:hover {
-    background-color: var(--botao-azul-efeito);
-    color: var(--cor-fundo);
+.principal p:not(#missao) {
+    background-color: orange;
+}*/
+/*configuracoes que devem ser modificadas do site de acordo com o dispositivo*/
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .listas-beneficios, .imagem{
+        width: 100%;
+    }
 }
