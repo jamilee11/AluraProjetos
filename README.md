@@ -1,2 +1,2 @@
 # AluraProjetos
-projetos criados durante os cursos.
+projetos criados durante os cursos da Plataforma Alura.
